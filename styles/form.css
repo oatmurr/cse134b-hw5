@@ -1,0 +1,143 @@
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+#contact-form label {
+    font-weight: bold;
+    margin: 0.25rem 0 0;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+#contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    font-size: 1rem;
+    margin: 1rem 0;
+    width: 25%;
+    font-family: inherit;
+}
+
+#contact-form button:hover {
+    background-color: var(--link-hover-color);
+}
+
+#contact-form ::placeholder {
+    color: var(--footer-color);
+}
+
+.required {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.error-message {
+    display: none;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+output {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error {
+    color: var(--text-color);
+    background-color: rgba(255, 68, 68, 0.2);
+    border: 1px solid #ff4444;
+}
+
+.info {
+    color: var(--text-color);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+output.fade-out {
+    opacity: 0;
+}
+
+output:empty {
+    display: none;
+}
+
+#contact-form input:not(:placeholder-shown):invalid,
+#contact-form textarea:not(:placeholder-shown):invalid {
+    color: var(--text-color);
+    background-color: rgba(255, 68, 68, 0.2);
+    border: 1px solid #ff4444;
+}
+
+#contact-form input:not(:placeholder-shown):valid,
+#contact-form textarea:not(:placeholder-shown):valid {
+    color: var(--text-color);
+    background-color: rgba(68, 255, 68, 0.2);
+    border: 1px solid #44ff44;
+}
+
+/* show error message when input is invalid */
+#contact-form input:not(:placeholder-shown):invalid + .error-message,
+#contact-form textarea:not(:placeholder-shown):invalid + .error-message {
+    display: block;
+}
+
+.char-count {
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+    color: var(--footer-color);
+}
+
+.char-count.warning {
+    color: #ffaa44;
+}
+
+.char-count.danger {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.invalid-input {
+    border-color: #ff4444 !important;
+    background-color: rgba(255, 68, 68, 0.2) !important;
+    animation: flash 0.3s;
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        background-color: rgba(255, 68, 68, 0.2);
+    }
+    50% {
+        background-color: transparent;
+    }
+}
+
+.valid-input {
+    border-color: #44ff44 !important;
+    background-color: rgba(68, 255, 68, 0.2) !important;
+}

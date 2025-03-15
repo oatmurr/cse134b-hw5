@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- htmlhead.dev -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Contact</title>
+
+        <meta
+            name="description"
+            content="BORN TO INK, OCEAN IS A SPLASH, 蛸 Cuttle them all 1797, I am cute cephalopod, 410,757,864,530 TENTACLES"
+        />
+        <meta name="author" content="github.com/oatmeeru" />
+        <link href="../styles/main.css" rel="stylesheet" />
+        <link href="../styles/card.css" rel="stylesheet" />
+        <link href="../styles/form.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <!-- <base href="https://gi.octobaby.moe/" /> -->
+        <script src="../scripts/main.js" defer></script>
+        <script src="../scripts/form.js" defer></script>
+        <script>
+            // functions
+        </script>
+        <noscript>
+            <style>
+                .theme-switch-wrapper {
+                    display: none;
+                }
+
+                /* add a message for users with JavaScript disabled */
+                body::before {
+                    content: "Theme switching requires JavaScript to be enabled";
+                    display: block;
+                    background-color: #fff3cd;
+                    color: #856404;
+                    padding: 10px;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+            </style>
+        </noscript>
+    </head>
+
+    <body id="top">
+        <!-- theme switcher -->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider"></div>
+            </label>
+        </div>
+
+        <header>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="characters.html">characters</a></li>
+                    <li><a href="weapons.html">weapons</a></li>
+                    <li><a href="artifacts.html">artifacts</a></li>
+                    <li><a href="user-fetch.html">user fetch</a></li>
+                    <li>
+                        <a href="lore-content.html">lore content</a>
+                    </li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="credits.html">credits</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr />
+        <main>
+            <h1>Contact Form (with JavaScript validation)</h1>
+
+            link to Part 2 (HTML and CSS only validation)
+            <a href="form-no-js.html">here</a>
+
+            <form
+                action="http://httpbin.org/post"
+                method="POST"
+                id="contact-form"
+                novalidate
+            >
+                <label for="name">Name <span class="required">*</span> </label>
+                <!-- i don't like using a pattern for name validation but i'll do it for the purposes of this assignment -->
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    minlength="2"
+                    maxlength="50"
+                    pattern="[A-Za-z\s'-]+"
+                    placeholder="your name"
+                    data-error-message="please keep your name to 50 characters or less and only use letters, spaces, hyphens, and apostrophes"
+                />
+
+                <label for="email">Email <span class="required">*</span></label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    placeholder="your.email@example.com"
+                    data-error-message="please enter a valid email address"
+                />
+
+                <label for="comments">Comments</label>
+                <textarea
+                    name="comments"
+                    id="comments"
+                    minlength="10"
+                    maxlength="500"
+                    placeholder="your message (10-500 characters)"
+                    data-error-message="please keep your message between 10 and 10,000 characters"
+                ></textarea>
+                <div class="char-count">
+                    <span id="current-count">0</span>/<span id="max-count"
+                        >500</span
+                    >
+                    characters
+                </div>
+
+                <input
+                    type="hidden"
+                    name="possible_bot"
+                    id="possible_bot"
+                    value="true"
+                />
+
+                <input
+                    type="hidden"
+                    name="form-errors"
+                    id="form-errors"
+                    value="[]"
+                />
+
+                <button type="submit">Submit</button>
+
+                <output
+                    for="contact-form"
+                    id="error-output"
+                    class="error"
+                ></output>
+
+                <output
+                    for="contact-form"
+                    id="info-output"
+                    class="info"
+                ></output>
+            </form>
+        </main>
+        <hr />
+        <footer id="foot">
+            <p>placeholder footer</p>
+            <address id="address_element">
+                Something<br />
+                Somewhere<br />
+                Sea of Bygone Eras, Fontaine<br />
+                ...<br />
+            </address>
+        </footer>
+    </body>
+</html>

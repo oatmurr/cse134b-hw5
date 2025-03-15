@@ -1,0 +1,179 @@
+/* card.css */
+
+:root {
+    /* card structure */
+    --card-border: 1px solid black;
+    --card-max-width: 8rem;
+    --card-max-height: 10rem;
+    --card-hover-transform: translateY(-0.25rem);
+
+    /* card text */
+    --card-text-size: 0.8rem;
+    --card-text-height: 2rem;
+    --card-text-padding: 0.125rem;
+    --card-text-color: black;
+    --card-text-bg: lightgrey;
+
+    /* card background colors */
+    --card-5star-bg: #e1aa51;
+    --card-5star-bg: color(display-p3 0.882 0.667 0.318);
+    --card-4star-bg: #b684c8;
+    --card-4star-bg: color(display-p3 0.714 0.518 0.784);
+
+    /* element colors */
+    --element-anemo: #74c2a8;
+    --element-anemo: color(display-p3 0.455 0.761 0.659);
+    --element-anemo-shadow: rgba(116, 194, 168, 0.3);
+
+    --element-geo: #fab632;
+    --element-geo: color(display-p3 0.98 0.714 0.196);
+    --element-geo-shadow: rgba(250, 182, 50, 0.3);
+
+    --element-electro: #af8ec1;
+    --element-electro: color(display-p3 0.686 0.557 0.757);
+    --element-electro-shadow: rgba(175, 142, 193, 0.3);
+
+    --element-dendro: #a5c83b;
+    --element-dendro: color(display-p3 0.647 0.784 0.231);
+    --element-dendro-shadow: rgba(165, 200, 59, 0.3);
+
+    --element-hydro: #4cc2f1;
+    --element-hydro: color(display-p3 0.298 0.761 0.945);
+    --element-hydro-shadow: rgba(76, 194, 241, 0.3);
+
+    --element-pyro: #ef7a35;
+    --element-pyro: color(display-p3 0.937 0.478 0.208);
+    --element-pyro-shadow: rgba(239, 122, 53, 0.3);
+
+    --element-cryo: #a0d7e4;
+    --element-cryo: color(display-p3 0.627 0.843 0.894);
+    --element-cryo-shadow: rgba(160, 215, 228, 0.3);
+}
+
+card {
+    display: block;
+    border: var(--card-border, 1px solid black);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    max-width: var(--card-max-width, 8rem);
+    max-height: var(--card-max-height, 10rem);
+    transition: transform 0.2s ease-in-out;
+    align-items: center;
+    justify-content: center;
+
+    &.star5 {
+        background-color: var(--card-5star-bg, #e1aa51);
+    }
+
+    &.star4 {
+        background-color: var(--card-4star-bg, #b684c8);
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    & h1 {
+        margin: 0;
+        padding: var(--card-text-padding, 0.25rem);
+        color: var(--card-text-color, black);
+        background-color: var(--card-text-bg, lightgrey);
+        height: var(--card-text-height, 2rem);
+        font-weight: bold;
+        font-size: var(--card-text-size, 0.8rem);
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    &:hover {
+        transform: var(--card-hover-transform, translateY(-0.25rem));
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    &:has(element)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        z-index: 1;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &:has(element[type="anemo"]) {
+        &::before {
+            background-image: url("../images/elements/UI_Buff_Element_Wind.png");
+        }
+        &:hover {
+            box-shadow: 0 5px 15px
+                var(--element-anemo-shadow, rgba(116, 194, 168, 0.3));
+        }
+    }
+
+    &:has(element[type="geo"]) {
+        &::before {
+            background-image: url("../images/elements/UI_Buff_Element_Rock.png");
+        }
+        &:hover {
+            box-shadow: 0 5px 15px
+                var(--element-geo-shadow, rgba(250, 182, 50, 0.3));
+        }
+    }
+
+    &:has(element[type="electro"]) {
+        &::before {
+            background-image: url("../images/elements/UI_Buff_Element_Electric.png");
+        }
+        &:hover {
+            box-shadow: 0 5px 15px
+                var(--element-electro-shadow, rgba(175, 142, 193, 0.3));
+        }
+    }
+
+    &:has(element[type="dendro"]) {
+        &::before {
+            background-image: url("../images/elements/UI_Buff_Element_Grass.png");
+        }
+        &:hover {
+            box-shadow: 0 5px 15px
+                var(--element-dendro-shadow, rgba(165, 200, 59, 0.3));
+        }
+    }
+
+    &:has(element[type="hydro"]) {
+        &::before {
+            background-image: url("../images/elements/UI_Buff_Element_Water.png");
+        }
+        &:hover {
+            box-shadow: 0 5px 15px
+                var(--element-hydro-shadow, rgba(76, 194, 241, 0.3));
+        }
+    }
+
+    &:has(element[type="pyro"]) {
+        &::before {
+            background-image: url("../images/elements/UI_Buff_Element_Fire.png");
+        }
+        &:hover {
+            box-shadow: 0 5px 15px
+                var(--element-pyro-shadow, rgba(239, 122, 53, 0.3));
+        }
+    }
+
+    &:has(element[type="cryo"]) {
+        &::before {
+            background-image: url("../images/elements/UI_Buff_Element_Ice.png");
+        }
+        &:hover {
+            box-shadow: 0 5px 15px
+                var(--element-cryo-shadow, rgba(160, 215, 228, 0.3));
+        }
+    }
+}

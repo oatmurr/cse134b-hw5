@@ -1,0 +1,14 @@
+picture.splash {
+    display: block;
+    border: 1px solid black;
+    overflow: hidden;
+    padding: 1rem;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+}

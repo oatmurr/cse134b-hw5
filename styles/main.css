@@ -1,0 +1,235 @@
+/* main.css  */
+
+:root {
+    /* font */
+    --font-family-main: "Atkinson Hyperlegible", Helvetica, sans-serif;
+
+    /* light theme */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #222222;
+    --link-color: #0066cc;
+    --link-hover-color: #004499;
+    --border-color: #dddddd;
+    --input-bg: #f5f5f5;
+    --input-border: #cccccc;
+    --button-bg: #0066cc;
+    --button-text: #ffffff;
+    --card-bg: #f9f9f9;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --warning-bg: lightgoldenrodyellow;
+    --warning-border: black;
+    --footer-color: #666666;
+}
+
+/* dark theme */
+[data-theme="dark"] {
+    --bg-color: #222222;
+    --text-color: #f0f0f0;
+    --heading-color: #ffffff;
+    --link-color: #66b3ff;
+    --link-hover-color: #99ccff;
+    --border-color: #444444;
+    --input-bg: #333333;
+    --input-border: #555555;
+    --button-bg: #4d94ff;
+    --button-text: #ffffff;
+    --card-bg: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --warning-bg: #665e00;
+    --warning-border: #998d00;
+    --footer-color: #aaaaaa;
+}
+
+html {
+    /* 1rem = 16px */
+    font-size: 16px;
+}
+
+main {
+    min-height: 100dvh;
+    padding: 2dvh 5dvw;
+}
+
+body {
+    font-family: var(--font-family-main, Helvetica, sans-serif);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Regular-102.otf")
+        format("opentype");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Bold-102.otf")
+        format("opentype");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-Italic-102.otf")
+        format("opentype");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/Atkinson-Hyperlegible/Atkinson-Hyperlegible-BoldItalic-102.otf")
+        format("opentype");
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading-color);
+}
+
+/* links */
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* horizontal rule */
+hr {
+    border-color: var(--border-color);
+}
+
+/* navbar */
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 0 1rem;
+}
+
+@media (max-width: 600px) {
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+    gap: 1rem;
+}
+
+/* warning box */
+warning {
+    background-color: lightgoldenrodyellow;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: block;
+    overflow: hidden;
+    width: 80%;
+
+    & card {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/****** footer ******/
+footer {
+    font-size: small;
+    text-align: center;
+}
+
+/* theme switcher styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 44px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 3px;
+    content: "";
+    height: 18px;
+    left: 3px;
+    position: absolute;
+    transition: 0.4s;
+    width: 18px;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider:after {
+    content: "☀️";
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    font-size: 12px;
+}
+
+input:checked + .slider:after {
+    content: "🌙";
+    position: absolute;
+    right: 6px;
+    left: auto;
+}
