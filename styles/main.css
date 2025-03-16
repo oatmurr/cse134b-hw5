@@ -250,10 +250,19 @@ input:checked + .slider:after {
 
 /* data controls - added for loading artifact data */
 data-controls {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     gap: 1rem;
-    margin: 1rem 0 1.5rem;
+    row-gap: 0;
+    padding: 1rem;
     justify-content: center;
+    align-items: center;
+}
+
+data-controls img {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
 }
 
 data-controls button {
@@ -278,7 +287,22 @@ data-controls button:hover {
         align-items: center;
     }
 
-    data-controls button {
-        width: 50%;
+    data-controls img#load-remote-img {
+        grid-row: 1;
+    }
+    data-controls button#load-remote {
+        grid-row: 2;
+    }
+    data-controls img#load-local-img {
+        grid-row: 3;
+    }
+    data-controls button#load-local {
+        grid-row: 4;
+    }
+    data-controls img#reset-local-img {
+        grid-row: 5;
+    }
+    data-controls button#reset-local {
+        grid-row: 6;
     }
 }

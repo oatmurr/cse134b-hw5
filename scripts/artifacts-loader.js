@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const artifactsContainer = document.getElementById("artifacts-container");
     const loadLocalButton = document.getElementById("load-local");
     const loadRemoteButton = document.getElementById("load-remote");
+    const resetLocalButton = document.getElementById("reset-local");
 
     // data from local-artifacts.json
     initialiseLocalStorage();
@@ -53,9 +54,22 @@ document.addEventListener("DOMContentLoaded", () => {
         fetchRemoteArtifacts();
     });
 
+    resetLocalButton.addEventListener("click", () => {
+        resetLocalStorage();
+        clearArtifacts();
+        // loadLocalArtifacts();
+    });
+
     // clear artifacts container
     function clearArtifacts() {
         artifactsContainer.innerHTML = "";
+    }
+
+    // manually clear local artifacts (to fix localStorage not updating)
+    function resetLocalStorage() {
+        localStorage.removeItem("artifacts");
+        console.log("Local storage cleared");
+        initialiseLocalStorage();
     }
 
     // initialise localStorage with data from local-artifacts.json if it doesn't exist already
