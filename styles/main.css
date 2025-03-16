@@ -10,6 +10,7 @@
     --heading-color: #222222;
     --link-color: #0066cc;
     --link-hover-color: #004499;
+    --link-visited-color: #551a8b;
     --border-color: #dddddd;
     --input-bg: #f5f5f5;
     --input-border: #cccccc;
@@ -30,6 +31,7 @@
     --heading-color: #ffffff;
     --link-color: #66b3ff;
     --link-hover-color: #99ccff;
+    --link-visited-color: #bb86fc;
     --border-color: #444444;
     --input-bg: #333333;
     --input-border: #555555;
@@ -110,6 +112,10 @@ a {
 
 a:hover {
     color: var(--link-hover-color);
+}
+
+a:visited {
+    color: var(--link-visited-color);
 }
 
 /* horizontal rule */

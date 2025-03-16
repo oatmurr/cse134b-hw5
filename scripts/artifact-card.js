@@ -108,6 +108,32 @@ class ArtifactCard extends HTMLElement {
                     margin-left: 0.5rem;
                 }
 
+                a {
+                    color: var(--link-color, #0066cc);
+                    transition: color 0.3s ease;
+                }
+
+                a:hover {
+                    color: var(--link-hover-color, #004499);
+                }
+
+                a:visited {
+                    color: var(--link-visited-color, #551a8b);
+                }
+
+                /* For dark mode support inside shadow DOM */
+                :host-context([data-theme="dark"]) a {
+                    color: var(--link-color, #66b3ff);
+                }
+
+                :host-context([data-theme="dark"]) a:hover {
+                    color: var(--link-hover-color, #99ccff);
+                }
+
+                :host-context([data-theme="dark"]) a:visited {
+                    color: var(--link-visited-color, #bb86fc);
+                }
+
                 @media (max-width: 768px) {                    
                     card {
                         grid-template-columns: 1fr;
