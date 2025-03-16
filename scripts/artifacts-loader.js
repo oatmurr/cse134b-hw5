@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const loadLocalButton = document.getElementById("load-local");
     const loadRemoteButton = document.getElementById("load-remote");
 
+    // data from local-artifacts.json
+    initialiseLocalStorage();
+
     // sample data for testing
     const sampleArtifacts = [
         {
@@ -53,6 +56,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // clear artifacts container
     function clearArtifacts() {
         artifactsContainer.innerHTML = "";
+    }
+
+    // initialise localStorage with data from local-artifacts.json if it doesn't exist already
+    function initialiseLocalStorage() {
+        if (!localStorage.getItem("artifacts")) {
+            fetch("../data/local-artifacts.json")
+                .then((response) => response.json())
+                .then((artifacts) => {
+                    localStorage.setItem(
+                        "artifacts",
+                        JSON.stringify(artifacts)
+                    );
+                    console.log(
+                        "Local artifacts loaded from local-artifacts.json"
+                    );
+                })
+                .catch((error) => {
+                    console.error("Error loading local artifacts:", error);
+                    localStorage.setItem(
+                        "artifacts",
+                        JSON.stringify(sampleArtifacts)
+                    );
+                });
+        }
     }
 
     // load artifacts from localStorage
