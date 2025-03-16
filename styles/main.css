@@ -247,3 +247,38 @@ input:checked + .slider:after {
     right: 6px;
     left: auto;
 }
+
+/* data controls - added for loading artifact data */
+data-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+    justify-content: center;
+}
+
+data-controls button {
+    padding: 0.5rem 1rem;
+    width: 128px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    border: 1px solid var(--card-border-color);
+}
+
+data-controls button:hover {
+    background-color: var(--link-hover-color);
+}
+
+@media (max-width: 480px) {
+    data-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    data-controls button {
+        width: 50%;
+    }
+}
