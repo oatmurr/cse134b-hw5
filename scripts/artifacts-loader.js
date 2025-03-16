@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     // initialise localStorage with sample data if it doesn't exist
-    if (!localStorage.getItem("artifacts")) {
-        localStorage.setItem("artifacts", JSON.stringify(sampleArtifacts));
-    }
+    // if (!localStorage.getItem("artifacts")) {
+    //     localStorage.setItem("artifacts", JSON.stringify(sampleArtifacts));
+    // }
 
     // event listeners for buttons
     loadLocalButton.addEventListener("click", () => {

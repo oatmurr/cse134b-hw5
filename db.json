@@ -215,60 +215,6 @@
             "fourpiece": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s.",
             "link": "./placeholder.html",
             "rarity": "5"
-        },
-        {
-            "id": 25,
-            "name": "Prayers for Illumination",
-            "image": "/images/artifacts/UI_RelicIcon_15009_4.png",
-            "twopiece": "Affected by Pyro for 40% less time.",
-            "fourpiece": "",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 26,
-            "name": "Prayers for Destiny",
-            "image": "/images/artifacts/UI_RelicIcon_15010_4.png",
-            "twopiece": "Affected by Hydro for 40% less time.",
-            "fourpiece": "",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 27,
-            "name": "Prayers for Wisdom",
-            "image": "/images/artifacts/UI_RelicIcon_15011_4.png",
-            "twopiece": "Affected by Electro for 40% less time.",
-            "fourpiece": "",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 28,
-            "name": "Prayers to Springtime",
-            "image": "/images/artifacts/UI_RelicIcon_15013_4.png",
-            "twopiece": "Affected by Cryo for 40% less time.",
-            "fourpiece": "",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 29,
-            "name": "Archaic Petra",
-            "image": "/images/artifacts/UI_RelicIcon_15014_4.png",
-            "twopiece": "+15% Geo DMG Bonus.",
-            "fourpiece": "Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.",
-            "link": "./placeholder.html",
-            "rarity": "5"
-        },
-        {
-            "id": 30,
-            "name": "Retracing Bolide",
-            "image": "/images/artifacts/UI_RelicIcon_15015_4.png",
-            "twopiece": "+35% Shield Strength.",
-            "fourpiece": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.",
-            "link": "./placeholder.html",
-            "rarity": "5"
         }
     ]
 }
