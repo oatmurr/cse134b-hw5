@@ -1,0 +1,121 @@
+{
+    "artifacts": [
+        {
+            "id": 1,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10001_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 2,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10002_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 3,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10003_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 4,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10004_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 5,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10005_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 6,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10006_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 7,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10007_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 8,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10008_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 9,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10009_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 10,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10010_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "3"
+        },
+        {
+            "id": 11,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10011_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "3"
+        },
+        {
+            "id": 12,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10012_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "4"
+        },
+        {
+            "id": 13,
+            "name": "",
+            "image": "/images/artifacts/UI_RelicIcon_10013_4.png",
+            "twopiece": "",
+            "fourpiece": "",
+            "link": "./placeholder.html",
+            "rarity": "3"
+        }
+    ]
+}
