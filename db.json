@@ -269,51 +269,6 @@
             "fourpiece": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.",
             "link": "./placeholder.html",
             "rarity": "5"
-        },
-        {
-            "id": 31,
-            "name": "Heart of Depth",
-            "image": "/images/artifacts/UI_RelicIcon_15016_4.png",
-            "twopiece": "+15% Hydro DMG Bonus.",
-            "fourpiece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.",
-            "link": "./placeholder.html",
-            "rarity": "5"
-        },
-        {
-            "id": 32,
-            "name": "Tenacity of the Millelith",
-            "image": "/images/artifacts/UI_RelicIcon_15017_4.png",
-            "twopiece": "+20% HP.",
-            "fourpiece": "When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field.",
-            "link": "./placeholder.html",
-            "rarity": "5"
-        },
-        {
-            "id": 33,
-            "name": "Pale Flame",
-            "image": "/images/artifacts/UI_RelicIcon_15018_4.png",
-            "twopiece": "+25% Physical DMG Bonus.",
-            "fourpiece": "When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%.",
-            "link": "./placeholder.html",
-            "rarity": "5"
-        },
-        {
-            "id": 34,
-            "name": "Shimenawa's Reminiscence",
-            "image": "/images/artifacts/UI_RelicIcon_15019_4.png",
-            "twopiece": "+18% ATK.",
-            "fourpiece": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration.",
-            "link": "./placeholder.html",
-            "rarity": "5"
-        },
-        {
-            "id": 35,
-            "name": "Emblem of Severed Fate",
-            "image": "/images/artifacts/UI_RelicIcon_15020_4.png",
-            "twopiece": "+20% Energy Recharge.",
-            "fourpiece": "Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.",
-            "link": "./placeholder.html",
-            "rarity": "5"
         }
     ]
 }
