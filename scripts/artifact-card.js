@@ -1,6 +1,6 @@
 class ArtifactCard extends HTMLElement {
     static get observedAttributes() {
-        return ["name", "image", "twopiece", "fourpiece", "link"];
+        return ["name", "image", "twopiece", "fourpiece", "link", "rarity"];
     }
 
     constructor() {
@@ -57,7 +57,18 @@ class ArtifactCard extends HTMLElement {
                     transition: transform 0.2s ease-in-out;
                     align-items: center;
                     justify-content: center;
+                }
+
+                inner-card.star5 {
                     background-color: var(--card-5star-bg, #e1aa51);
+                }
+
+                inner-card.star4 {
+                    background-color: var(--card-4star-bg, #b684c8);
+                }
+
+                inner-card.star3 {
+                    background-color: var(--card-3star-bg, #51a1b5);
                 }
 
                 inner-card img {
@@ -122,7 +133,7 @@ class ArtifactCard extends HTMLElement {
             </style>
             <card class="star5">
                 <artifact-image>
-                    <inner-card>
+                    <inner-card id="inner-card" class="star5">
                         <picture>
                             <img id="artifact-img" alt="artifact image">
                         </picture>
@@ -136,6 +147,8 @@ class ArtifactCard extends HTMLElement {
                         
                         <p class="label" id="fourpiece">4-Piece:</p>
                         <p class="bonus" id="fourpiece-bonus">Four piece set bonus description</p>
+
+                        <a id="artifact-set-link" href="#">view details</a>
                     </description-grid>
                 </artifact-description>
             </card>
@@ -163,6 +176,7 @@ class ArtifactCard extends HTMLElement {
         const fourpiece =
             this.getAttribute("fourpiece") || "No 4-piece bonus available";
         const link = this.getAttribute("link") || "#";
+        const rarity = this.getAttribute("rarity") || "5";
 
         const nameElement = this.shadowRoot.querySelector("#artifact-set-name");
         const imageElement = this.shadowRoot.querySelector("#artifact-img");
@@ -171,6 +185,7 @@ class ArtifactCard extends HTMLElement {
         const fourPieceElement =
             this.shadowRoot.querySelector("#fourpiece-bonus");
         const linkElement = this.shadowRoot.querySelector("#artifact-set-link");
+        const innerCardElement = this.shadowRoot.querySelector("#inner-card");
 
         if (nameElement) nameElement.textContent = name;
         if (imageElement) {
@@ -181,6 +196,17 @@ class ArtifactCard extends HTMLElement {
         if (fourPieceElement) fourPieceElement.textContent = fourpiece;
         if (linkElement) {
             linkElement.href = link;
+        }
+
+        if (innerCardElement) {
+            innerCardElement.classList.remove(
+                "star1",
+                "star2",
+                "star3",
+                "star4",
+                "star5"
+            );
+            innerCardElement.classList.add(`star${rarity}`);
         }
     }
 }

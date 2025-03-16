@@ -72,6 +72,10 @@ card {
         background-color: var(--card-4star-bg, #b684c8);
     }
 
+    &.star3 {
+        background-color: var(--card-3star-bg, #51a1b5);
+    }
+
     & img {
         width: 100%;
         height: auto;
