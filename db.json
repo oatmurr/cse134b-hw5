@@ -1,121 +1,427 @@
 {
-    "artifacts": [
-        {
-            "id": 1,
-            "name": "Resolution of Sojourner",
-            "image": "/images/artifacts/UI_RelicIcon_10001_4.png",
-            "twopiece": "+18% ATK.",
-            "fourpiece": "Increases Charged Attack CRIT Rate by 30%.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 2,
-            "name": "Brave Heart",
-            "image": "/images/artifacts/UI_RelicIcon_10002_4.png",
-            "twopiece": "+18% ATK.",
-            "fourpiece": "Increases DMG by 30% against opponents with more than 50% HP.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 3,
-            "name": "Defender's Will",
-            "image": "/images/artifacts/UI_RelicIcon_10003_4.png",
-            "twopiece": "+30% DEF.",
-            "fourpiece": "For each different element present in your own party, the wearer's Elemental RES to that corresponding element is increased by 30%.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 4,
-            "name": "Tiny Miracle",
-            "image": "/images/artifacts/UI_RelicIcon_10004_4.png",
-            "twopiece": "+20% All Elemental RES.",
-            "fourpiece": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 5,
-            "name": "Berserker",
-            "image": "/images/artifacts/UI_RelicIcon_10005_4.png",
-            "twopiece": "+12% CRIT Rate.",
-            "fourpiece": "When HP is below 70%, CRIT Rate increases by an additional 24%.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 6,
-            "name": "Martial Artist",
-            "image": "/images/artifacts/UI_RelicIcon_10006_4.png",
-            "twopiece": "+15% Normal and Charged Attack DMG.",
-            "fourpiece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 7,
-            "name": "Instructor",
-            "image": "/images/artifacts/UI_RelicIcon_10007_4.png",
-            "twopiece": "+80 Elemental Mastery.",
-            "fourpiece": "Upon triggering an Elemental Reaction, increases all party members' Elemental Mastery by 120 for 8s.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 8,
-            "name": "Gambler",
-            "image": "/images/artifacts/UI_RelicIcon_10008_4.png",
-            "twopiece": "+20% Elemental Skill DMG.",
-            "fourpiece": "Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can only occur once every 15s.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 9,
-            "name": "The Exile",
-            "image": "/images/artifacts/UI_RelicIcon_10010_4.png",
-            "twopiece": "+20% Energy Recharge.",
-            "fourpiece": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 10,
-            "name": "Adventurer",
-            "image": "/images/artifacts/UI_RelicIcon_10010_4.png",
-            "twopiece": "+1000 Max HP.",
-            "fourpiece": "Opening a chest regenerates 30% Max HP over 5s.",
-            "link": "./placeholder.html",
-            "rarity": "3"
-        },
-        {
-            "id": 11,
-            "name": "Lucky Dog",
-            "image": "/images/artifacts/UI_RelicIcon_10011_4.png",
-            "twopiece": "+100 DEF.",
-            "fourpiece": "Picking up Mora restores 300 HP.",
-            "link": "./placeholder.html",
-            "rarity": "3"
-        },
-        {
-            "id": 12,
-            "name": "Scholar",
-            "image": "/images/artifacts/UI_RelicIcon_10012_4.png",
-            "twopiece": "+20% Energy Recharge.",
-            "fourpiece": "Gaining Elemental Particles or Orbs gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s.",
-            "link": "./placeholder.html",
-            "rarity": "4"
-        },
-        {
-            "id": 13,
-            "name": "Traveling Doctor",
-            "image": "/images/artifacts/UI_RelicIcon_10013_4.png",
-            "twopiece": "+20% Incoming Healing.",
-            "fourpiece": "Using Elemental Burst restores 20% HP.",
-            "link": "./placeholder.html",
-            "rarity": "3"
-        }
-    ]
+  "artifacts": [
+    {
+      "id": 1,
+      "name": "Resolution of Sojourner",
+      "image": "/images/artifacts/UI_RelicIcon_10001_4.png",
+      "twopiece": "+18% ATK.",
+      "fourpiece": "Increases Charged Attack CRIT Rate by 30%.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 2,
+      "name": "Brave Heart",
+      "image": "/images/artifacts/UI_RelicIcon_10002_4.png",
+      "twopiece": "+18% ATK.",
+      "fourpiece": "Increases DMG by 30% against opponents with more than 50% HP.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 3,
+      "name": "Defender's Will",
+      "image": "/images/artifacts/UI_RelicIcon_10003_4.png",
+      "twopiece": "+30% DEF.",
+      "fourpiece": "For each different element present in your own party, the wearer's Elemental RES to that corresponding element is increased by 30%.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 4,
+      "name": "Tiny Miracle",
+      "image": "/images/artifacts/UI_RelicIcon_10004_4.png",
+      "twopiece": "+20% All Elemental RES.",
+      "fourpiece": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 5,
+      "name": "Berserker",
+      "image": "/images/artifacts/UI_RelicIcon_10005_4.png",
+      "twopiece": "+12% CRIT Rate.",
+      "fourpiece": "When HP is below 70%, CRIT Rate increases by an additional 24%.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 6,
+      "name": "Martial Artist",
+      "image": "/images/artifacts/UI_RelicIcon_10006_4.png",
+      "twopiece": "+15% Normal and Charged Attack DMG.",
+      "fourpiece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 7,
+      "name": "Instructor",
+      "image": "/images/artifacts/UI_RelicIcon_10007_4.png",
+      "twopiece": "+80 Elemental Mastery.",
+      "fourpiece": "Upon triggering an Elemental Reaction, increases all party members' Elemental Mastery by 120 for 8s.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 8,
+      "name": "Gambler",
+      "image": "/images/artifacts/UI_RelicIcon_10008_4.png",
+      "twopiece": "+20% Elemental Skill DMG.",
+      "fourpiece": "Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can only occur once every 15s.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 9,
+      "name": "The Exile",
+      "image": "/images/artifacts/UI_RelicIcon_10010_4.png",
+      "twopiece": "+20% Energy Recharge.",
+      "fourpiece": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 10,
+      "name": "Adventurer",
+      "image": "/images/artifacts/UI_RelicIcon_10010_4.png",
+      "twopiece": "+1000 Max HP.",
+      "fourpiece": "Opening a chest regenerates 30% Max HP over 5s.",
+      "link": "./placeholder.html",
+      "rarity": "3"
+    },
+    {
+      "id": 11,
+      "name": "Lucky Dog",
+      "image": "/images/artifacts/UI_RelicIcon_10011_4.png",
+      "twopiece": "+100 DEF.",
+      "fourpiece": "Picking up Mora restores 300 HP.",
+      "link": "./placeholder.html",
+      "rarity": "3"
+    },
+    {
+      "id": 12,
+      "name": "Scholar",
+      "image": "/images/artifacts/UI_RelicIcon_10012_4.png",
+      "twopiece": "+20% Energy Recharge.",
+      "fourpiece": "Gaining Elemental Particles or Orbs gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s.",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 13,
+      "name": "Traveling Doctor",
+      "image": "/images/artifacts/UI_RelicIcon_10013_4.png",
+      "twopiece": "+20% Incoming Healing.",
+      "fourpiece": "Using Elemental Burst restores 20% HP.",
+      "link": "./placeholder.html",
+      "rarity": "3"
+    },
+    {
+      "id": 14,
+      "name": "Blizzard Strayer",
+      "image": "/images/artifacts/UI_RelicIcon_14001_4.png",
+      "twopiece": "+15% Cryo DMG Bonus.",
+      "fourpiece": "When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 15,
+      "name": "Thundersoother",
+      "image": "/images/artifacts/UI_RelicIcon_14002_4.png",
+      "twopiece": "+40% Electro RES.",
+      "fourpiece": "Increases DMG against opponents affected by Electro by 35%.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 16,
+      "name": "Lavawalker",
+      "image": "/images/artifacts/UI_RelicIcon_14003_4.png",
+      "twopiece": "+40% Pyro RES.",
+      "fourpiece": "Increases DMG against opponents affected by Pyro by 35%.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 17,
+      "name": "Maiden Beloved",
+      "image": "/images/artifacts/UI_RelicIcon_14004_4.png",
+      "twopiece": "+15% Healing Bonus.",
+      "fourpiece": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 18,
+      "name": "Gladiator's Finale",
+      "image": "/images/artifacts/UI_RelicIcon_15001_4.png",
+      "twopiece": "+18% ATK.",
+      "fourpiece": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 19,
+      "name": "Viridescent Venerer",
+      "image": "/images/artifacts/UI_RelicIcon_15002_4.png",
+      "twopiece": "+15% Anemo DMG Bonus",
+      "fourpiece": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 20,
+      "name": "Wanderer's Troupe",
+      "image": "/images/artifacts/UI_RelicIcon_15003_4.png",
+      "twopiece": "+80 Elemental Mastery.",
+      "fourpiece": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or a Bow.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 21,
+      "name": "Thundering Fury",
+      "image": "/images/artifacts/UI_RelicIcon_15005_4.png",
+      "twopiece": "+15% Electro DMG Bonus.",
+      "fourpiece": "Increases DMG caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased by 20%. When Quicken or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 22,
+      "name": "Crimson Witch of Flames",
+      "image": "/images/artifacts/UI_RelicIcon_15006_4.png",
+      "twopiece": "+15 Pyro DMG Bonus.",
+      "fourpiece": "Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 23,
+      "name": "Noblesse Oblige",
+      "image": "/images/artifacts/UI_RelicIcon_15007_4.png",
+      "twopiece": "+20% Elmental Burst DMG.",
+      "fourpiece": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 24,
+      "name": "Bloodstained Chivalry",
+      "image": "/images/artifacts/UI_RelicIcon_15008_4.png",
+      "twopiece": "+25% Physical DMG Bonus.",
+      "fourpiece": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 25,
+      "name": "Prayers for Illumination",
+      "image": "/images/artifacts/UI_RelicIcon_15009_4.png",
+      "twopiece": "Affected by Pyro for 40% less time.",
+      "fourpiece": "",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 26,
+      "name": "Prayers for Destiny",
+      "image": "/images/artifacts/UI_RelicIcon_15010_4.png",
+      "twopiece": "Affected by Hydro for 40% less time.",
+      "fourpiece": "",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 27,
+      "name": "Prayers for Wisdom",
+      "image": "/images/artifacts/UI_RelicIcon_15011_4.png",
+      "twopiece": "Affected by Electro for 40% less time.",
+      "fourpiece": "",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 28,
+      "name": "Prayers to Springtime",
+      "image": "/images/artifacts/UI_RelicIcon_15013_4.png",
+      "twopiece": "Affected by Cryo for 40% less time.",
+      "fourpiece": "",
+      "link": "./placeholder.html",
+      "rarity": "4"
+    },
+    {
+      "id": 29,
+      "name": "Archaic Petra",
+      "image": "/images/artifacts/UI_RelicIcon_15014_4.png",
+      "twopiece": "+15% Geo DMG Bonus.",
+      "fourpiece": "Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 30,
+      "name": "Retracing Bolide",
+      "image": "/images/artifacts/UI_RelicIcon_15015_4.png",
+      "twopiece": "+35% Shield Strength.",
+      "fourpiece": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 31,
+      "name": "Heart of Depth",
+      "image": "/images/artifacts/UI_RelicIcon_15016_4.png",
+      "twopiece": "+15% Hydro DMG Bonus.",
+      "fourpiece": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 32,
+      "name": "Tenacity of the Millelith",
+      "image": "/images/artifacts/UI_RelicIcon_15017_4.png",
+      "twopiece": "+20% HP.",
+      "fourpiece": "When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 33,
+      "name": "Pale Flame",
+      "image": "/images/artifacts/UI_RelicIcon_15018_4.png",
+      "twopiece": "+25% Physical DMG Bonus.",
+      "fourpiece": "When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 34,
+      "name": "Shimenawa's Reminiscence",
+      "image": "/images/artifacts/UI_RelicIcon_15019_4.png",
+      "twopiece": "+18% ATK.",
+      "fourpiece": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 35,
+      "name": "Emblem of Severed Fate",
+      "image": "/images/artifacts/UI_RelicIcon_15020_4.png",
+      "twopiece": "+20% Energy Recharge.",
+      "fourpiece": "Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 36,
+      "name": "Husk of Opulent Dreams",
+      "image": "/images/artifacts/UI_RelicIcon_15021_4.png",
+      "twopiece": "+30% DEF.",
+      "fourpiece": "A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions: When on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s. When off the field, the character gains 1 stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity stack, 1 stack is lost.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 37,
+      "name": "Ocean-Hued Clam",
+      "image": "/images/artifacts/UI_RelicIcon_15022_4.png",
+      "twopiece": "+15% Healing Bonus.",
+      "fourpiece": "When the character equipping this artifact set heals a character in the party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the amount of HP recovered from healing (including overflow healing). At the end of the duration, the Sea-Dyed Foam will explode, dealing DMG to nearby opponents based on 90% of the accumulated healing. (This DMG is calculated similarly to Reactions such as Electro-Charged, and Superconduct, but is not affected by Elemental Mastery, Character Levels, or Reaction DMG Bonuses). Only one Sea-Dyed Foam can be produced every 3.5 seconds. Each Sea-Dyed Foam can accumulate up to 30,000 HP (including overflow healing). There can be no more than one Sea-Dyed Foam active at any given time. This effect can still be triggered even when the character who is using this artifact set is not on the field.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 38,
+      "name": "Vermillion Hereafter",
+      "image": "/images/artifacts/UI_RelicIcon_15023_4.png",
+      "twopiece": "+18% ATK.",
+      "fourpiece": "After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will further increase by 10%. This further increase can occur this way a maximum of 4 times. This effect can be triggered once every 0.8s. Nascent Light will be dispelled when the character leaves the field. If an Elemental Burst is used again during the duration of Nascent Light, the original Nascent Light will be dispelled.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 39,
+      "name": "Echoes of an Offering",
+      "image": "/images/artifacts/UI_RelicIcon_15024_4.png",
+      "twopiece": "+18% ATK.",
+      "fourpiece": "When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK. This effect will be dispelled 0.05s after a Normal Attack deals DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it triggering the next time will increase by 20%. This trigger can occur once every 0.2s.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 40,
+      "name": "Deepwood Memories",
+      "image": "/images/artifacts/UI_RelicIcon_15025_4.png",
+      "twopiece": "+15% Dendro DMG Bonus.",
+      "fourpiece": "After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is not on the field.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 41,
+      "name": "Gilded Dreams",
+      "image": "/images/artifacts/UI_RelicIcon_15026_4.png",
+      "twopiece": "+80 Elemental Mastery.",
+      "fourpiece": "Within 8s of triggering an Elemental Reaction, the character equipping this will obtain buffs based on the Elemental Type of the other party members. ATK is increased by 14% for each party member whose Elemental Type is the same as the equipping character, and Elemental Mastery is increased by 50 for every party member with a different Elemental Type. Each of the aforementioned buffs will count up to 3 characters. This effect can be triggered once every 8s. The character who equips this can still trigger its effects when not on the field.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 42,
+      "name": "Desert Pavilion Chronicle",
+      "image": "/images/artifacts/UI_RelicIcon_15027_4.png",
+      "twopiece": "+15% Anemo DMG Bonus.",
+      "fourpiece": "When Charged Attacks hit opponents, the equipping character's Normal Attack SPD will increase by 10% while Normal, Charged, and Plunging Attack DMG will increase by 40% for 15s.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 43,
+      "name": "Flower of Paradise Lost",
+      "image": "/images/artifacts/UI_RelicIcon_15028_4.png",
+      "twopiece": "+80 Elemental Mastery.",
+      "fourpiece": "The equipping character's Bloom, Hyperbloom, and Burgeon reaction DMG are increased by 40%. Additionally, after the equipping character triggers Bloom, Hyperbloom, or Burgeon, they will gain another 25% bonus to the effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously. This effect can only be triggered once per second. The character who equips this can still trigger its effects when not on the field.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 44,
+      "name": "Nymph's Dream",
+      "image": "/images/artifacts/UI_RelicIcon_15029_4.png",
+      "twopiece": "+15% Hydro DMG Bonus.",
+      "fourpiece": "After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG Bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 45,
+      "name": "Vourukasha's Glow",
+      "image": "/images/artifacts/UI_RelicIcon_15030_4.png",
+      "twopiece": "+20% HP.",
+      "fourpiece": "Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 46,
+      "name": "Marechaussee Hunter",
+      "image": "/images/artifacts/UI_RelicIcon_15031_4.png",
+      "twopiece": "+15% Normal and Charged Attack DMG.",
+      "fourpiece": "When current HP increases or decreases, CRIT Rate will be increased by 12% for 5s. Max 3 stacks.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    },
+    {
+      "id": 47,
+      "name": "Golden Troupe",
+      "image": "/images/artifacts/UI_RelicIcon_15032_4.png",
+      "twopiece": "+20% Elemental Skill DMG.",
+      "fourpiece": "Increases Elemental Skill DMG by 25%. Additionally, when not on the field, Elemental Skill DMG will be further increased by 25%. This effect will be cleared 2s after taking the field.",
+      "link": "./placeholder.html",
+      "rarity": "5"
+    }
+  ]
 }
