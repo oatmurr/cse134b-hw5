@@ -2,7 +2,7 @@
 
 :root {
     /* card structure */
-    --card-border: 1px solid black;
+    --card-border: 1px solid var(--card-border-color);
     --card-max-width: 8rem;
     --card-max-height: 10rem;
     --card-hover-transform: translateY(-0.25rem);

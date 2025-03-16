@@ -1,6 +1,6 @@
 class ArtifactCard extends HTMLElement {
     static get observedAttributes() {
-        return ["name", "image", "description", "link"];
+        return ["name", "image", "twopiece", "fourpiece", "link"];
     }
 
     constructor() {
@@ -17,31 +17,23 @@ class ArtifactCard extends HTMLElement {
             <style>
                 :host {
                     display: block;
-                    padding: 1rem;
+                    width: 100%;
+                    min-width: 256px;
+                    margin: 0 auto;
                 }
 
-                .artifact-card {
+                card {
                     display: grid;
-                    grid-template-columns: 8rem 1fr;
+                    grid-template-columns: auto 1fr;
                     border: var(--card-border, 1px solid black);
                     overflow: hidden;
                     position: relative;
                     transition: transform 0.2s ease-in-out;
+                    width: 100%;
+                    min-width: 256px;
                 }
 
-                .artifact-card.star5 {
-                    background-color: var(--card-5star-bg, #e1aa51);
-                }
-
-                .artifact-card.star4 {
-                    background-color: var(--card-4star-bg, #b684c8);
-                }
-
-                .artifact-card.star3 {
-                    background-color: var(--card-3star-bg, #51A1B5);
-                }
-
-                .artifact-card:hover {
+                card:hover {
                     transform: var(--card-hover-transform, translateY(-0.25rem));
                     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
                     cursor: pointer;
@@ -51,19 +43,35 @@ class ArtifactCard extends HTMLElement {
                     grid-column: 1;
                     display: flex;
                     flex-direction: column;
+                    margin: 0.5rem;
                 }
 
-                picture {
+                inner-card {
+                    display: block;
+                    border: var(--card-border, 1px solid black);
+                    overflow: hidden;
+                    position: relative;
+                    text-align: center;
+                    max-width: var(--card-max-width, 8rem);
+                    max-height: var(--card-max-height, 10rem);
+                    transition: transform 0.2s ease-in-out;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--card-5star-bg, #e1aa51);
+                }
+
+                inner-card img {
                     width: 100%;
                     height: auto;
                     display: block;
                 }
 
-                h2[id="name"] {
+                inner-card h2 {
                     margin: 0;
-                    padding: 0.125rem;
+                    padding: var(--card-text-padding, 0.125rem);
                     color: var(--card-text-color, black);
                     background-color: var(--card-text-bg, lightgrey);
+                    height: var(--card-text-height, 2rem);
                     font-weight: bold;
                     font-size: var(--card-text-size, 0.8rem);
                     text-align: center;
@@ -71,25 +79,66 @@ class ArtifactCard extends HTMLElement {
                 }
 
                 artifact-description {
-                    grid-column: 2;
                     padding: 0.5rem;
+                    display: block;
+                }
+
+                artifact-description-grid {
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
+                    gap: 0.5rem;
+                }
+
+                .label {
+                    font-weight: bold;
+                }
+                
+                .bonus {
+                    font-weight: normal;
+                    margin-left: 0.5rem;
+                }
+
+                @media (max-width: 768px) {                    
+                    card {
+                        grid-template-columns: 1fr;
+                        grid-template-rows: auto auto;
+                    }
+                    
+                    artifact-image {
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+                    
+                    artifact-description {
+                        grid-column: 1;
+                        grid-row: 2;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    :host {
+                        width: 100%;
+                    }
                 }
             </style>
-            <artifact-card class="star5">
+            <card class="star5">
                 <artifact-image>
-                    <picture>
-                        <img src="/images/artifacts/placeholder.png" alt="artifact image">
-                    </picture>
-                    <h2 id="name">set name</h2>
+                    <inner-card>
+                        <picture>
+                            <img id="artifact-img" alt="artifact image">
+                        </picture>
+                        <h2 id="artifact-set-name">set name</h2>
+                    </inner-card>
                 </artifact-image>
                 <artifact-description>
-                    <p>description</p>
-                    <a href=".artifacts/placeholder.html">
+                    <description-grid>
+                        <p class="label" id="twopiece">2-Piece:</p>
+                        <p class="bonus" id="twopiece-bonus">Two piece set bonus description</p>
+                        
+                        <p class="label" id="fourpiece">4-Piece:</p>
+                        <p class="bonus" id="fourpiece-bonus">Four piece set bonus description</p>
+                    </description-grid>
                 </artifact-description>
-            </artifact-card>
+            </card>
         `;
         this.titleElement = this.shadowRoot.querySelector("name");
         this.render();
@@ -108,26 +157,31 @@ class ArtifactCard extends HTMLElement {
 
     render() {
         const name = this.getAttribute("name") || "Unknown Artifact";
-        const image =
-            this.getAttribute("image") || "/images/artifacts/placeholder.png";
-        const description =
-            this.getAttribute("description") || "No description available";
+        const image = this.getAttribute("image") || "";
+        const twopiece =
+            this.getAttribute("twopiece") || "No 2-piece bonus available";
+        const fourpiece =
+            this.getAttribute("fourpiece") || "No 4-piece bonus available";
         const link = this.getAttribute("link") || "#";
 
-        const nameElement = this.shadowRoot.querySelector("#name");
-        const imageElement = this.shadowRoot.querySelector("img");
-        const descriptionElement = this.shadowRoot.querySelector("p");
-        const linkElement = this.shadowRoot.querySelector("a");
+        const nameElement = this.shadowRoot.querySelector("#artifact-set-name");
+        const imageElement = this.shadowRoot.querySelector("#artifact-img");
+        const twoPieceElement =
+            this.shadowRoot.querySelector("#twopiece-bonus");
+        const fourPieceElement =
+            this.shadowRoot.querySelector("#fourpiece-bonus");
+        const linkElement = this.shadowRoot.querySelector("#artifact-set-link");
 
-        if (nameElement) {
-            nameElement.textContent = name;
-        }
+        if (nameElement) nameElement.textContent = name;
         if (imageElement) {
             imageElement.src = image;
             imageElement.alt = name;
         }
-        if (descriptionElement) descriptionElement.textContent = description;
-        if (linkElement) linkElement.href = link;
+        if (twoPieceElement) twoPieceElement.textContent = twopiece;
+        if (fourPieceElement) fourPieceElement.textContent = fourpiece;
+        if (linkElement) {
+            linkElement.href = link;
+        }
     }
 }
 

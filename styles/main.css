@@ -20,6 +20,7 @@
     --warning-bg: lightgoldenrodyellow;
     --warning-border: black;
     --footer-color: #666666;
+    --card-border-color: black;
 }
 
 /* dark theme */
@@ -39,6 +40,7 @@
     --warning-bg: #665e00;
     --warning-border: #998d00;
     --footer-color: #aaaaaa;
+    --card-border-color: white;
 }
 
 html {
@@ -138,10 +140,22 @@ li {
 }
 
 /* grid */
-.grid-container {
+.characters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
     gap: 1rem;
+}
+
+.artifacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 480px) {
+    .artifacts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* warning box */
