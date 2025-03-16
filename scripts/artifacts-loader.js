@@ -79,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // fetch artifacts from server
     function fetchRemoteArtifacts() {
-        const apiURL = "";
+        const apiURL =
+            "https://my-json-server.typicode.com/oatmurr/cse134b-hw5/artifacts";
 
         fetch(apiURL)
             .then((response) => {
