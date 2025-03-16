@@ -19,6 +19,8 @@
     --card-5star-bg: color(display-p3 0.882 0.667 0.318);
     --card-4star-bg: #b684c8;
     --card-4star-bg: color(display-p3 0.714 0.518 0.784);
+    --card-3star-bg: #51a1b5;
+    --card-3star-bg: color(display-p3 0.318 0.631 0.706);
 
     /* element colors */
     --element-anemo: #74c2a8;
